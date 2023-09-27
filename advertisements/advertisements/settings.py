@@ -79,6 +79,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'hom': {
+        'ENGINE': 'django.db.backends.postgesql',
+        'NAME': BASE_DIR / 'hom.postgesql',
     }
 }
 
@@ -126,3 +130,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media/')
+
+MEDIA_URL = 'media/'
